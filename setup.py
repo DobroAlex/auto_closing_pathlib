@@ -5,7 +5,7 @@ with open("README.md", "r") as readme:
 
 setuptools.setup(
     name="auto_removable_pathlib",
-    version="0.0.3",
+    version="0.0.6",
     author="Alex Konsmanov",
     author_email="alexkoshernosiegov@gmail.com",
     description="The alternative implementation of pathlib.Path's context manager "

@@ -17,8 +17,8 @@ class AutoRemovablePath(pathlib.Path):
     # All credits for this solution with _flavour go to https://stackoverflow.com/a/53231179/12444061
 
     # PyCharm marks this _flavour statement as containing unresolved references
-    # noinspection PyUnresolvedReferences,PyProtectedMember
-    _flavour = pathlib._windows_flavour if os.name == 'nt' else pathlib._posix_flavo
+    # noinspection PyUnresolvedReferences
+    _flavour = pathlib._windows_flavour if os.name == 'nt' else pathlib._posix_flavour
 
     def remove_dir_recursively(self) -> None:
         """
