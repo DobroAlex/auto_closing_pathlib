@@ -2,7 +2,7 @@ import os
 import pathlib
 
 
-class AutoClosingPath(pathlib.Path):
+class AutoRemovablePath(pathlib.Path):
     """
     This class overrides context manager behavior of the original pathlib.Path class.
     If a dir or a file is open using the 'with' statement
@@ -35,7 +35,7 @@ class AutoClosingPath(pathlib.Path):
         if self.is_dir():
 
             for child in self.glob('*'):  # Iterating over each sub-file or sub-dir
-                child.unlink() if child.is_file() else AutoClosingPath(child).remove_dir_recursively()  # Removes a
+                child.unlink() if child.is_file() else AutoRemovablePath(child).remove_dir_recursively()  # Removes a
                 # file if a child is a file, else recursively removes sub-dir
 
             self.rmdir()  # Removing this dir. It will be empty by the time
