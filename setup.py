@@ -5,7 +5,7 @@ with open("README.md", "r") as readme:
 
 setuptools.setup(
     name="auto_removable_pathlib",
-    version="0.0.6",
+    version="0.0.7",
     author="Alex Konsmanov",
     author_email="alexkoshernosiegov@gmail.com",
     description="The alternative implementation of pathlib.Path's context manager "
@@ -23,11 +23,12 @@ setuptools.setup(
         "Operating System :: Microsoft :: Windows",
         "Operating System :: POSIX",
         "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.6"
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Utilities"
     ],
-    python_requires='>=3.7',
+    python_requires='>=3.6',
 )
